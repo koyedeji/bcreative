@@ -1,0 +1,51 @@
+.root {
+   position: relative;
+}
+
+
+.prevBtn,
+.nextBtn {
+   position: absolute;
+   top: 50%;
+}
+
+.prevBtn {
+   left: 0;
+   transform: rotate(90deg);
+}
+
+.nextBtn {
+   right: 0;
+   transform: rotate(-90deg);
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    height: 500px;
+
+
+  & img {
+    height: auto;
+     max-width: 100%;
+    display: block;
+  }
+
+   @media(--small-viewport) {
+       & img {
+           height: 100%;
+       }
+   }
+
+}
+
+
+.text {
+    color: var(--white);
+    display: block;
+    margin: 15px 0;
+    text-align: center;
+   font-size: 1.6rem;
+}

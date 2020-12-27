@@ -1,0 +1,161 @@
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --orange: #ff4301;
+  --blue: #273cf1;
+  --font-monteserrat: 'Montserrat', sans-serif;
+  --font-color-primary: #333;
+  --container-sm: 540px;
+  --container-md: 1200px;
+  --container-lg: 1360px;
+  --container-xl: 1800px
+}
+
+@custom-media --small-viewport (min-width: 37.5rem); /* 600px */
+@custom-media --medium-viewport (min-width: 48rem); /* 768px */
+@custom-media --large-viewport (min-width: 64rem); /* 768px */
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: var(--font-monteserrat);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  box-sizing: border-box;
+  color: var(--font-color-primary);
+  font-size: 10px;
+  margin: 0;
+  min-height: 100%;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  touch-action: manipulation;
+}
+
+p {
+  margin: 0 0 20px;
+  text-align: justify;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 30px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+a:hover {
+  text-decoration: none;
+
+}
+
+button {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 0.07em;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.logoText {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600 ;
+  margin-bottom: 0;
+  color: var(--white);
+  white-space: nowrap;
+
+  @media (--medium-viewport) {
+    font-size: 1.8rem;
+  }
+}
+
+.logoText::first-letter {
+  font-weight: 800;
+  font-size: 1.5rem;
+
+  @media (--medium-viewport) {
+    font-size: 3rem;
+  }
+}
+
+.ptb10 {
+   padding: 10rem 0;
+}
+
+.mt50 {
+   margin-top: 50px;
+}
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.mb50 {
+   margin-bottom: 40px;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.gutter20 {
+    padding: 0;
+    @media(--small-viewport) {
+      padding: 20px;
+    }
+}
+
+.shadow-sm {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.heading {}
+.heading__main {
+   font-size: 2rem;
+   font-weight: 600;
+   display: block;
+   margin-bottom: 10px;
+}
+
+.bgLightGrey {
+   background-color: #fcfcfc;
+}
+
+.shadow-w-sm {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+.overflow-hidden{
+   overflow :hidden;
+}
+
+.w100 {
+  width: 100%;
+}

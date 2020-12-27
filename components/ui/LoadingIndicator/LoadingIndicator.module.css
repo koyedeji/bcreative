@@ -1,0 +1,25 @@
+.root {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 3px solid #fcfcfc;
+    border-top-color: var(--orange);
+    animation: spin 800ms infinite;
+}
+
+.spin {
+  animation-name: spin;
+  animation-duration: 800ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+     transform: rotate(360deg);
+  }
+}

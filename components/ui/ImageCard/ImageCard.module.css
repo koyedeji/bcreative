@@ -1,0 +1,31 @@
+
+.root {
+   width: 100%;
+   background: var(--white);
+   margin-bottom: 30px;
+
+
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+
+
+  @media(--small-viewport) {
+    height: 350px;
+  }
+
+}
+.container {
+   padding: 2rem 1rem;
+   font-size: 2rem;
+
+
+}
+
+.desc {
+   text-transform: capitalize;
+   text-align: center ;
+}

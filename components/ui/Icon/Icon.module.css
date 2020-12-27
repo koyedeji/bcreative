@@ -1,0 +1,17 @@
+.root {
+  fill: var(--font-color-primary);
+}
+
+.sm {
+   height: 20px;
+   width: 20px;
+}
+
+.md {
+   height: 30px;
+   width: 30px;
+}
+
+.white {
+   fill: var(--white)
+}

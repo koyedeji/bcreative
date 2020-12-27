@@ -1,0 +1,42 @@
+.root {
+   text-decoration: none;
+   border: 0;
+   outline: 0;
+   cursor: pointer;
+   text-align: center;
+   display: inline-block;
+   background: none;
+   transition: all 0.3s ease;
+  transition-property: color, opacity;
+}
+
+.root:hover {
+  color: var(--blue);
+}
+
+
+.primary {
+   background: var(--black);
+   color: var(--white);
+   padding: 1.6rem 2rem;
+}
+
+.primary:hover {
+    color: var(--white);
+}
+
+.secondary {
+  border: 2px solid var(--white);
+  color: var(--white);
+  padding: 1.6rem 2rem;
+}
+
+.secondary,
+.primary:hover {
+  opacity: 0.8;
+}
+
+.secondary,
+.primary:active {
+  transform: translateY(1px);
+}

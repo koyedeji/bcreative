@@ -1,0 +1,24 @@
+.root {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  overflow: scroll;
+  z-index: 500;
+  background-color: rgba(0, 0, 0, 0.9);
+
+}
+
+.header {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   height: 70px;
+}
+
+.content {
+    margin: 5% auto;
+
+}
