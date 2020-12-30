@@ -6,13 +6,13 @@
    height: 50rem;
    color: var(--white);
    position: relative;
-   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../public/img/ba.png');
+   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../public/img/banner.jpg');
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
 
-   @media (--large-viewport) {
-     height: 110rem;
+   @media (--medium-viewport) {
+     height: 90rem;
    }
 }
 

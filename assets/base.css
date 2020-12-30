@@ -106,10 +106,28 @@ ul {
   }
 }
 
-.ptb10 {
-   padding: 10rem 0;
+.ptb8 {
+   padding: 8rem 0;
 }
 
+.ptb3 {
+   padding: 5rem 0;
+}
+
+.pb3 {
+   padding-bottom: 3rem;
+}
+
+.pr15 {
+    padding-right: 0;
+   @media(--small-viewport) {
+     padding-right: 15px;
+   }
+}
+
+.mt30 {
+   margin-top: 30px;
+}
 .mt50 {
    margin-top: 50px;
 }
@@ -158,4 +176,23 @@ ul {
 
 .w100 {
   width: 100%;
+}
+
+.order2 {
+   order: initial;
+  @media(--medium-viewport) {
+     order: 2;
+  }
+}
+
+.separator {
+   border-bottom: 1px solid #f0f0f0;
+}
+
+.alignCenter {
+   align-items: center;
+}
+
+.bold500 {
+  font-weight: 500;
 }

@@ -84,7 +84,7 @@ const Footer = () => {
       </Container>
       <Container size="xl">
         <div className={cn(s.bottom)}>
-          <p className={cn('mb0')}>&copy; bcreative & design 2020</p>
+          <p className={cn('mb0')}>&copy; Bcreative & design 2020</p>
         </div>
       </Container>
     </footer>

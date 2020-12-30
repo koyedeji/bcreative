@@ -8,7 +8,6 @@
   overflow: scroll;
   z-index: 500;
   background-color: rgba(0, 0, 0, 0.9);
-
 }
 
 .header {
@@ -20,5 +19,4 @@
 
 .content {
     margin: 5% auto;
-
 }

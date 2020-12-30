@@ -7,7 +7,7 @@
    display: inline-block;
    background: none;
    transition: all 0.3s ease;
-  transition-property: color, opacity;
+   transition-property: color, opacity;
 }
 
 .root:hover {
@@ -19,6 +19,7 @@
    background: var(--black);
    color: var(--white);
    padding: 1.6rem 2rem;
+   text-transform: uppercase;
 }
 
 .primary:hover {
@@ -29,6 +30,7 @@
   border: 2px solid var(--white);
   color: var(--white);
   padding: 1.6rem 2rem;
+  text-transform: uppercase;
 }
 
 .secondary,

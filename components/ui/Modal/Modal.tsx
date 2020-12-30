@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect, useCallback } from 'react';
 import s from './Modal.module.css';
 import { Container, Icon, Button } from '@components/ui';
 import { usePreventScroll } from '@components/hooks';
@@ -19,11 +19,35 @@ const Modal: FC<Props> = (props) => {
     }
   };
 
+  const keyMap = new Map([[27, handleClose]]);
+
+  const handleKeyDown = useCallback(
+    (e) => {
+      const listener = keyMap.get(e.keyCode || e.which);
+      if (listener) listener();
+      return null;
+    },
+    [isOpen]
+  );
+
+  useEffect(() => {
+    document.body.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [handleKeyDown]);
+
   usePreventScroll({ disable: isOpen });
 
   return isOpen ? (
     <Portal selector={'#modal'}>
-      <div className={cn(s.root)}>
+      <div
+        tabIndex={0}
+        onClick={handleClose}
+        className={cn(s.root)}
+        role={'dialog'}
+        aria-modal={true}
+      >
         <Container size={'xl'}>
           <div className={cn(s.header)}>
             <Button onClick={handleClose}>

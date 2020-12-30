@@ -1,4 +1,4 @@
-import { FC, forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { Container, Button, Icon } from '@components/ui';
 import { Link } from '@components/common';
 import { useUI } from '@components/ui/context';
