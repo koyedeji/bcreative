@@ -9,12 +9,10 @@
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
-  justify-content: space-between;
 
   @media(max-width: 600px) {
     & [class*="col-"] {
       width: 100%;
-
     }
   }
 
@@ -65,7 +63,6 @@
     }
     & .col-md-3 {
       width: 25%;
-      background: red;
     }
     & .col-md-4 {
       width: 33.33%;
@@ -98,7 +95,6 @@
   @media(--large-viewport) {
     & .col-lg-1 {
       width: 8.33%;
-      background-color: red;
     }
     & .col-lg-2 {
       width: 16.66%;
