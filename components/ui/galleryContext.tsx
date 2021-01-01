@@ -9,11 +9,11 @@ type GalleryProps = { url: string; caption?: string }[];
 
 const gallery = {
   womenCollections: [
-    { url: 'design-w-1', category: 'women' },
+    { url: 'design-w-5', category: 'women' },
     { url: 'design-w-2', category: 'women' },
     { url: 'design-w-3', category: 'women' },
     { url: 'design-w-4', category: 'women' },
-    { url: 'design-w-5', category: 'women' },
+    { url: 'design-w-1', category: 'women' },
     { url: 'design-w-6', category: 'women' },
     { url: 'design-w-7', category: 'women' },
     { url: 'design-w-8', category: 'women' },
@@ -64,6 +64,17 @@ const gallery = {
     { url: 'design-w-53', category: 'women' },
     { url: 'design-w-54', category: 'women' },
     { url: 'design-w-55', category: 'women' },
+    { url: 'design-w-56', category: 'women' },
+    { url: 'design-w-57', category: 'women' },
+    { url: 'design-w-58', category: 'women' },
+    { url: 'design-w-59', category: 'women' },
+    { url: 'design-w-60', category: 'women' },
+    { url: 'design-w-61', category: 'women' },
+    { url: 'design-w-62', category: 'women' },
+    { url: 'design-w-63', category: 'women' },
+    { url: 'design-w-64', category: 'women' },
+    { url: 'design-w-65', category: 'women' },
+    { url: 'design-w-66', category: 'women' },
   ],
   menCollections: [
     { url: 'design-m-1', category: 'men' },

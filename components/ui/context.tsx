@@ -2,9 +2,11 @@ import {
   createContext,
   useMemo,
   useReducer,
+  useState,
   useContext,
   ReactNode,
   FC,
+  SyntheticEvent,
 } from 'react';
 
 interface State {
@@ -78,6 +80,8 @@ interface ContextProps extends State {
   closeModal?(): void;
   scrollToTop?(): void;
   setModalView?(view: string): void;
+  setCurrentHash?(e: SyntheticEvent<EventTarget>): void;
+  hash?: string;
 }
 
 const UIContext = createContext<ContextProps>(initialState);
@@ -86,6 +90,7 @@ UIContext.displayName = 'UIContext';
 
 export const UIProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [state, dispatch] = useReducer(uiReducer, initialState);
+  const [hash, setHash] = useState('');
 
   const openNavbar = () => dispatch({ type: types.UI_NAV_OPEN });
 
@@ -103,13 +108,19 @@ export const UIProvider: FC<{ children: ReactNode }> = ({ children }) => {
     dispatch({ type: types.UI_MODAL_VIEW, payload: { view } });
 
   const scrollToTop = () => {
+    setHash('');
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   };
 
+  const setCurrentHash = (e) =>
+    setHash(e.target.getAttribute('data-hash') || '');
+
   const value = useMemo(
     () => ({
       ...state,
+      hash,
+      setCurrentHash,
       openNavbar,
       closeNavbar,
       toggleNavbar,
@@ -118,7 +129,7 @@ export const UIProvider: FC<{ children: ReactNode }> = ({ children }) => {
       closeModal,
       setModalView,
     }),
-    [state]
+    [state, hash]
   );
 
   return <UIContext.Provider value={value}>{children}</UIContext.Provider>;

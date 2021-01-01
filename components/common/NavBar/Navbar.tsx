@@ -8,65 +8,50 @@ import s from './NavBar.module.css';
 
 interface Props {
   className?: string;
+  navigations?: { name: string; href: string }[];
 }
 
 const Navbar = forwardRef<HTMLHeadElement, Props>((props, ref) => {
-  const { className } = props;
-  const { toggleNavbar, isNavOpen } = useUI();
+  const { className, navigations } = props;
+  const { toggleNavbar, isNavOpen, setCurrentHash, hash } = useUI();
 
   usePreventScroll({ disable: isNavOpen });
 
   const rootClassName = cn(s.root, className);
+
   return (
     <header ref={ref} className={cn(rootClassName, 'shadow-sm')}>
       <Container size={'xl'}>
         <div className={cn(s.wrapper, { [s.expand]: isNavOpen })}>
-          <Link title="home" href={'/'} className="logoText">
+          <Link
+            onClick={setCurrentHash}
+            title="home"
+            href={'/'}
+            className="logoText"
+          >
             Bcreative & design
           </Link>
           <nav className={cn(s.nav)}>
             <Container className={cn(s.navContainer)} size={'xl'}>
               <ul className={cn(s.navList)}>
-                <li className={cn(s.navItem)}>
-                  <Button
-                    href={'#about'}
-                    title={'about'}
-                    className={cn(s.navLink)}
-                    Component={'a'}
-                  >
-                    About
-                  </Button>
-                </li>
-                <li className={cn(s.navItem)}>
-                  <Button
-                    title={'courses'}
-                    href={'#courses'}
-                    className={cn(s.navLink)}
-                    Component={'a'}
-                  >
-                    Courses
-                  </Button>
-                </li>
-                <li className={cn(s.navItem)}>
-                  <Button
-                    href={'#gallery'}
-                    title={'gallery'}
-                    className={cn(s.navLink)}
-                    Component={'a'}
-                  >
-                    gallery
-                  </Button>
-                </li>
-                <li className={cn(s.navItem)}>
-                  <Button
-                    href={'#contact'}
-                    title={'contact'}
-                    className={cn(s.navLink)}
-                    Component={'a'}
-                  >
-                    Contact
-                  </Button>
-                </li>
+                {navigations.map((node) => {
+                  return (
+                    <li key={node.name} className={cn(s.navItem)}>
+                      <Button
+                        onClick={setCurrentHash}
+                        Component={'a'}
+                        title={'about'}
+                        className={cn(s.navLink, {
+                          [s.active]: hash === node.name,
+                        })}
+                        data-hash={node.name}
+                        href={node.href}
+                      >
+                        {node.name}
+                      </Button>
+                    </li>
+                  );
+                })}
                 <li className={cn(s.socialGroup)}>
                   <span className={cn(s.spanText)}>Follow us</span>
                   <Button className={cn(s.socialLink)} Component={'a'}>
@@ -89,5 +74,14 @@ const Navbar = forwardRef<HTMLHeadElement, Props>((props, ref) => {
     </header>
   );
 });
+
+Navbar.defaultProps = {
+  navigations: [
+    { name: 'about', href: '#about' },
+    { name: 'courses', href: '#courses' },
+    { name: 'gallery', href: '#gallery' },
+    { name: 'contact', href: '#contact' },
+  ],
+};
 
 export default Navbar;

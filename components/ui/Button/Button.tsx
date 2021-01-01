@@ -14,7 +14,7 @@ export interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   title?: string;
   variant?: Variant;
   Component?: JSXElementConstructor<Record<string, unknown>> | string;
-  onClick?: (e: SyntheticEvent<EventTarget>) => void;
+  onClick?: (e: SyntheticEvent<EventTarget>) => void | null;
 }
 
 const Button = forwardRef<HTMLButtonElement, Props>((props, ref) => {

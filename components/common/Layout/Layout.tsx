@@ -1,7 +1,7 @@
 import { FC, ReactNode, useState, createRef } from 'react';
 import cn from 'classnames';
-import { NavBar, Footer } from '@components/common';
 import dynamic from 'next/dynamic';
+import { NavBar, Footer } from '@components/common';
 import { Button, Icon, Modal } from '@components/ui';
 import { useUI } from '@components/ui/context';
 import { useScroll } from '@components/hooks';
@@ -21,8 +21,8 @@ interface Props {
 
 const Layout: FC<Props> = (props) => {
   const { children } = props;
-
   const { scrollToTop, isModalOpen, closeModal, modalView } = useUI();
+
   const [isMainContent, setMainContent] = useState(false);
 
   const setVisible = () => {

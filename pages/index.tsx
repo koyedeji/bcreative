@@ -89,16 +89,13 @@ function HomePage(): JSX.Element {
         <section id={'courses'} className={'ptb8'}>
           <Container>
             <Grid className="alignCenter pb3 separator" container>
-              <Grid col="col-md-4" className="heading">
+              <Grid col="col-md-12" className="heading">
                 <span className="heading__main">Trainings</span>
-              </Grid>
-              <Grid col="col-md-7" className="content">
                 <Text variant={'sectionHeading'}>
                   Sewing trainings for professionals and beginners
                 </Text>
               </Grid>
             </Grid>
-
             <div className="separator ptb3">
               <Text variant="sectionHeading" className="bold500">
                 Beginners Class
@@ -160,11 +157,7 @@ function HomePage(): JSX.Element {
                 View some of our traditional african wears
               </Text>
             </div>
-            <Grid
-              Component={'ul'}
-              container
-              style={{ justifyContent: 'flex-start' }}
-            >
+            <Grid className="flexStart" Component={'ul'} container>
               {Object.keys(gallery).map((key) => {
                 const img = gallery[key][0];
                 return (
