@@ -90,7 +90,7 @@ function HomePage(): JSX.Element {
           <Container>
             <Grid className="alignCenter pb3 separator" container>
               <Grid col="col-md-12" className="heading">
-                <span className="heading__main">Trainings</span>
+                <span className="heading__main">Training sessions</span>
                 <Text variant={'sectionHeading'}>
                   Sewing trainings for professionals and beginners
                 </Text>
@@ -101,9 +101,9 @@ function HomePage(): JSX.Element {
                 Beginners Class
               </Text>
               <Text>
-                The class is suitable for individuals that has no sewing
-                experience. The aim of this class is to show you you all the
-                tools needed to start sewing and how to use them.
+                This class is suitable for individuals that has no sewing
+                experience. The aim of this class is to show you all the tools
+                needed to start sewing and how to use them.
               </Text>
               <Text>
                 In this class, you will learn how to tread needles, hemming,
@@ -119,7 +119,7 @@ function HomePage(): JSX.Element {
                 The aim of this class is to introduce students to sewing
                 equipments, narrate the quality and skill needed to become a
                 seamstress, learn all related career opportunities available
-                besides that of dressmaking & design,
+                besides that of dressmaking & design.
               </Text>
             </div>
             <div className="ptb3 separator">
@@ -133,7 +133,7 @@ function HomePage(): JSX.Element {
               </Text>
             </div>
             <div className={'ptb3'}>
-              <Text>Have interest in any our classes?</Text>
+              <Text>Have interest in any of our classes?</Text>
               <Text>
                 you can contact us to find out more or enrol on any of our
                 classes

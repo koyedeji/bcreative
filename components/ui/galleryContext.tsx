@@ -9,11 +9,11 @@ type GalleryProps = { url: string; caption?: string }[];
 
 const gallery = {
   womenCollections: [
-    { url: 'design-w-5', category: 'women' },
     { url: 'design-w-2', category: 'women' },
+    { url: 'design-w-1', category: 'women' },
     { url: 'design-w-3', category: 'women' },
     { url: 'design-w-4', category: 'women' },
-    { url: 'design-w-1', category: 'women' },
+    { url: 'design-w-5', category: 'women' },
     { url: 'design-w-6', category: 'women' },
     { url: 'design-w-7', category: 'women' },
     { url: 'design-w-8', category: 'women' },

@@ -37,9 +37,9 @@ const Grid = forwardRef<HTMLDivElement, Props>((props, ref) => {
   const rootClassNames = cn(
     {
       [s.row]: container,
-      [colClassNames]: !container,
       [s.between]: justify === 'between',
       [s.start]: justify === 'start',
+      [colClassNames]: !container,
     },
     className
   );

@@ -3,7 +3,7 @@
   padding: 0 20px;
   width: 100%;
 
-  @media(--small-viewport) {
+  @media(--medium-viewport) {
     padding: 0 30px
   }
 }
