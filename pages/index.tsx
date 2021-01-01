@@ -157,7 +157,7 @@ function HomePage(): JSX.Element {
                 View some of our traditional african wears
               </Text>
             </div>
-            <Grid className="flexStart" Component={'ul'} container>
+            <Grid justify={'start'} Component={'ul'} container>
               {Object.keys(gallery).map((key) => {
                 const img = gallery[key][0];
                 return (

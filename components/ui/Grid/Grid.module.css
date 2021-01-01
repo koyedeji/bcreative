@@ -8,8 +8,6 @@
 .row {
   display: flex;
   flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: space-between;
 
   @media(max-width: 600px) {
     & [class*="col-"] {
@@ -131,4 +129,12 @@
       width: 100%;
     }
   }
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.start {
+   justify-content: flex-start;
 }

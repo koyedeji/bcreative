@@ -14,6 +14,7 @@ interface Props {
   className?: string;
   children: ReactNode;
   col?: string;
+  justify?: string;
 }
 
 const genColClassNames = (cols: string[]) => {
@@ -25,6 +26,7 @@ const Grid = forwardRef<HTMLDivElement, Props>((props, ref) => {
     col = '',
     Component = 'div',
     container = false,
+    justify = 'between',
     style,
     children,
     className,
@@ -36,6 +38,8 @@ const Grid = forwardRef<HTMLDivElement, Props>((props, ref) => {
     {
       [s.row]: container,
       [colClassNames]: !container,
+      [s.between]: justify === 'between',
+      [s.start]: justify === 'start',
     },
     className
   );

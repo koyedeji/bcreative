@@ -193,10 +193,6 @@ ul {
    align-items: center;
 }
 
-.flexStart {
-   justify-content: flex-start;
-}
-
 .bold500 {
   font-weight: 500;
 }
